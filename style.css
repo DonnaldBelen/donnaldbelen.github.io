@@ -33,3 +33,58 @@ body {
     max-width: 50px;
     max-height: 50px;
 }
+
+.clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.hr {
+    position: absolute;
+    background: black;
+    transform-origin: bottom center;
+    width: 2px;
+    height: 30%; /* longer hour hand */
+    bottom: 50%;
+    left: 50%;
+}
+
+.min {
+    position: absolute;
+    background: black;
+    transform-origin: bottom center;
+    width: 2px;
+    height: 40%; /* longer minute hand */
+    bottom: 50%;
+    left: 50%;
+}
+
+.sec {
+    position: absolute;
+    background: black;
+    transform-origin: bottom center;
+    width: 2px;
+    height: 50%; /* longest second hand */
+    bottom: 50%;
+    left: 50%;
+}
+
+.number {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-size: 20px;
+    top: 0%;
+    left: 50%;
+    transform-origin: 0% 500%;
+    transform: translate(-50%, 100%);
+}
+
+#day {
+    text-align: center;
+    padding-top: 100px; /* Adjust as needed */
+}

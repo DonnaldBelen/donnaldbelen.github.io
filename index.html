@@ -7,6 +7,7 @@
     <!-- add css file -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="center">
         <p class="animated-text" style="font-size: 4em;">Hi, I'm Donnald</p>
@@ -18,9 +19,63 @@
 
     <div class="social-icons">
         <p>Follow me on:</p>
-    <img src="images/facebook.png" alt="facebook">
+    <a href="https://www.facebook.com/donnaldjohn.belen" target="_blank">
+        <img src="images/facebook.png" alt="facebook">
+    </a>
     <img src="images/insta.png" alt="instagram">
-    <img src="images/linked.png" alt="linkedIn">
+    <a href="https://www.linkedin.com/in/donnald-john-belen-b7b390134/" target="_blank">
+        <img src="images/linked.png" alt="linkedIn">
+    </a>
+    <a href="mailto:djbelen3090@gmail.com"><img src="images/gmail.png" alt="gmail"></a>
     </div>
+    <div class="clock" style="position: fixed; top: 0; right: 0;">
+        <div class="hr" id="hr"></div>
+        <div class="min" id="min"></div>
+        <div class="sec" id="sec"></div>
+            <!-- Add numbers -->
+        <div class="numbers">
+            <div class="number" style="transform: rotate(30deg);">1</div>
+            <div class="number" style="transform: rotate(60deg);">2</div>
+            <div class="number" style="transform: rotate(90deg);">3</div>
+            <div class="number" style="transform: rotate(120deg);">4</div>
+            <div class="number" style="transform: rotate(150deg);">5</div>
+            <div class="number" style="transform: rotate(180deg);">6</div>
+            <div class="number" style="transform: rotate(210deg);">7</div>
+            <div class="number" style="transform: rotate(240deg);">8</div>
+            <div class="number" style="transform: rotate(270deg);">9</div>
+            <div class="number" style="transform: rotate(300deg);">10</div>
+            <div class="number" style="transform: rotate(330deg);">11</div>
+            <div class="number" shotyle="transform: rotate(360deg);">12</div>
+        </div>
+        <div id="day"></div>
+    </div>
+
+    <script>
+        // for clock
+        setInterval(() => {
+            const d = new Date();
+            const htime = d.getHours();
+            const mtime = d.getMinutes();
+            const stime = d.getSeconds();
+            const hr = 30*htime + mtime/2;
+            const mr = 6*mtime;
+            const sr = 6*stime;
+
+            const hour = document.getElementById('hr');
+            const minute = document.getElementById('min');
+            const second = document.getElementById('sec');
+
+            hour.style.transform = `rotate(${hr}deg)`;
+            minute.style.transform = `rotate(${mr}deg)`;
+            second.style.transform = `rotate(${sr}deg)`;
+
+            // Get current day
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const dayName = days[d.getDay()];
+
+            // Display day
+            document.getElementById('day').innerHTML = dayName;
+        }, 1000);
+    </script>
 </body>
 </html>
