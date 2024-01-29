@@ -1,0 +1,35 @@
+body {
+    background-image: url('images/wallpaper01.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+
+.animated-text {
+    animation: fadeIn 3s ease-in-out infinite;
+    font-size: 2em;
+    margin-bottom: 0.0em;
+}
+
+.social-icons {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.social-icons img {
+    max-width: 50px;
+    max-height: 50px;
+}
