@@ -4,12 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World</title>
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            align-items: center;
+            text-align: center;
+        }
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            50% {opacity: 0.5;}
+            100% {opacity: 1;}
+        }
+
+        .animated-text {
+            animation: fadeIn 2s ease-in-out infinite;
+            font-size: 2em;
+        }
+    </style>
 </head>
 <body>
-
-    <h1>Hello, World!</h1>
-    <p>This is a sample HTML file for your GitHub Pages site.</p>
-    <img src="images/example.jpg" alt="Description of image">
+    <div class="center">
+        <p class="animated-text" style="font-size: 2em;">Hi, I'm Donnald</p>
+            <!-- add clickable items under -->
+            <div><a href="about.html">About Me</a>
+            <a href="My Projects">My Projects</a>
+            <a href="hobbies.html">My Hobbies</a></div>
+    </div>
 
 </body>
 </html>
